@@ -35,8 +35,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :leaves, Leaves.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "leaves_dev",
-  password: "whi1tman",
+  username: "postgres",
+  password: "postgres",
   database: "leaves_dev",
   hostname: "localhost",
   pool_size: 10

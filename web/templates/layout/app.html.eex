@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello Leaves!</title>
+    <title>Leaves</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
     <link type="text/css" rel="stylesheet" href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Oswald|Passion+One'>
   </head>

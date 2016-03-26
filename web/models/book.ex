@@ -6,5 +6,7 @@ defmodule Leaves.Book do
     field :author, :string
     field :image, :string
     field :is_rented, :boolean
+
+    timestamps
   end
 end

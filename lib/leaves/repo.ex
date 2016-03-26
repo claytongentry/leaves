@@ -13,6 +13,13 @@ defmodule Leaves.Repo do
       %Leaves.Book{id: "3", title: "Slaughterhouse-Five", author: "Kurt Vonnegut", image: "/images/slaughter.jpg", is_rented: true}
     ]
   end
+  def all(Leaves.Rental) do
+    [
+      %Leaves.Rental{book_id: "2", renter_id: "1", provider_id: "3", start_date: "2016-03-15", return_date: "2016-03-31"},
+      %Leaves.Rental{book_id: "3", renter_id: "2", provider_id: "3", start_date: "2016-03-11", return_date: "2016-03-28"},
+      %Leaves.Rental{book_id: "1", renter_id: "3", provider_id: "1", start_date: "2016-03-17", return_date: "2016-03-22"}
+    ]
+  end
   def all(_module), do: []
 
   def get(module, id) do

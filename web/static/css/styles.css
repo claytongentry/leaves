@@ -10,6 +10,11 @@ h1 {
   color: white;
 }
 
+h2 {
+  font-family: Oswald, Arial, sans-serif;
+  font-size: 48px;
+}
+
 .header {
   padding: 0px;
   padding-left: 50px;
