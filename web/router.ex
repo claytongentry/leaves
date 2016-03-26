@@ -16,11 +16,10 @@ defmodule Leaves.Router do
   scope "/", Leaves do
     pipe_through :browser # Use the default browser stack
 
-    get "/rentals",   RentalController, :index
-    get "/books/:id", BookController,   :show
-    get "/books/",    BookController,   :index
-    get "/users/:id", UserController,   :show
-    get "/",          PageController,   :index
+    get "/",              PageController,   :index
+    resources "/rentals", RentalController, only: [:index]
+    resources "/books",   BookController, only: [:index, :show, :new, :create]
+    resources "/users",   UserController, only: [:show, :new, :create]
   end
 
   # Other scopes may use custom stacks.

@@ -10,7 +10,7 @@ defmodule Leaves do
       # Start the endpoint when the application starts
       supervisor(Leaves.Endpoint, []),
       # Start the Ecto repository
-      #supervisor(Leaves.Repo, []),
+      supervisor(Leaves.Repo, []),
       # Here you could define other workers and supervisors as children
       # worker(Leaves.Worker, [arg1, arg2, arg3]),
     ]

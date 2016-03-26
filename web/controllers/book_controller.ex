@@ -7,8 +7,9 @@ defmodule Leaves.BookController do
     render conn, "index.html", books: books
   end
 
-  def show(conn, %{"id" => id}) do
-    book = Repo.get(Book, id)
-    render conn, "show.html", book: book
-  end
+  # def show(conn, %{"id" => id}) do
+  #   book = Repo.get(Book, id)
+  #   book_owner = Repo.get(BookOwner, )
+  #   render conn, "show.html", book: book
+  # end
 end

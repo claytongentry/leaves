@@ -1,15 +1,17 @@
-<table class="table">
-  <%= for book <- @books do %>
-    <tr>
-      <td><img class="cover_thumbnail" src=<%= book.image %>/></td></a>
-      <td><h3><%= book.title %></h3></td>
-      <td><h5><%= book.author %></h5></td>
-      <%= if book.is_rented == false do %>
-      <td><h5>Available!</h5></td>
-      <% else %>
-      <td></h5>Due in 3 days</h5></td>
-      <% end %>
-      <td><%= link "View", to: book_path(@conn, :show, book.id) %></td>
-    </tr>
-  <% end %>
-</table>
+<%= for book <- @books do %>
+<div class="row">
+  <div class="col-md-6">
+    <img class="cover_thumbnail" src=<%= book.image %>/>
+  </div>
+  <div class="col-md-6">
+    <h3><%= book.title %></h3>
+    <h5><%= book.author %></h5>
+    <%= if book.is_rented == false do %>
+    <h5>Available!</h5>
+    <% else %>
+    <h5>Due in 3 days</h5>
+    <% end %>
+    <%= link "View", to: book_path(@conn, :show, book.id) %>
+  </div>
+</div>
+<% end %>

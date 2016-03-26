@@ -1,11 +1,12 @@
 defmodule Leaves.Book do
   use Leaves.Web, :model
 
-  schema "book" do
-    field :title, :string
-    field :author, :string
-    field :image, :string
-    field :is_rented, :boolean
+  schema "books" do
+    field    :title, :string
+    field    :author, :string
+    field    :image, :string
+    field    :pages, :integer
+    has_many :copies, Leaves.Copy
 
     timestamps
   end
