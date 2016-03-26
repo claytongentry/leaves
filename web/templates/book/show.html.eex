@@ -1,0 +1,8 @@
+<h2><%= @book.title %></h2>
+<h4><%= @book.author %></h4>
+<img class="book_profile_image" src=<%= @book.image %>/>
+<%= if @book.is_rented == false do %>
+<button>Rent</button>
+<% else %>
+<p>Due in 4 days</p>
+<% end %>
